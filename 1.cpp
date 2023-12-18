@@ -3,13 +3,13 @@
 
 using namespace std;
 
-void snowflake();
+void snowflake(int height, int width);
 
 int main() {
 	snowflake();
 }
 
-void snowflake() {
+void snowflake(int height, int width) {
 	int lb = 4, rb = 4, i = 0;
 	for (; i < 5; i++) {
 		for (int j = 0; j < 10; j++) {
@@ -24,7 +24,7 @@ void snowflake() {
 		rb++;
 		cout << endl;
 	}
-	lb = 1, rb = 8;
+	lb++, rb--;
 	for (; i >= 0; i--) {
 		for (int j = 0; j < 10; j++) {
 			if (j >= lb && j < rb) {
